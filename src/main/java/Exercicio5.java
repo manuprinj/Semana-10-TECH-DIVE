@@ -1,5 +1,4 @@
 import static Utils.DataUtils.format;
-import static Utils.DataUtils.formatMesAno;
 import static Utils.EntradaUtils.getMesAno;
 
 import java.time.DayOfWeek;
