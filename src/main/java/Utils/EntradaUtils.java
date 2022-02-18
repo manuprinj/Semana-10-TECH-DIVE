@@ -44,4 +44,13 @@ public class EntradaUtils {
             }
         }
     }
+
+    public static String getString(String mensagem) {
+        String valor = "";
+        while (valor.isBlank()) {
+            System.out.println(mensagem);
+            valor = SC.nextLine();
+        }
+        return valor;
+    }
 }
