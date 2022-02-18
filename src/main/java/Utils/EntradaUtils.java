@@ -3,6 +3,7 @@ package Utils;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.YearMonth;
 import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
@@ -17,6 +18,18 @@ public class EntradaUtils {
                 return DataUtils.parse(SC.nextLine());
             } catch (DateTimeParseException e) {
                 System.out.println("Data inválida, digite a data no formato dd/MM/yyyy");
+            }
+        }
+    }
+
+    public static YearMonth getMesAno(String mensagem) {
+        while (true) {
+            System.out.println(mensagem);
+            try {
+                return DataUtils.parseMesAno(SC.nextLine());
+            } catch (DateTimeParseException e) {
+                e.printStackTrace();
+                System.out.println("Data inválida, digite a data no formato MM/yyyy");
             }
         }
     }
